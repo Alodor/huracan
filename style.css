@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#box {
+    position: fixed;
+    display: none;
+    top: 60%;
+    left: 60%;
+    width: 70px;
+    height: 70px;
+    opacity: .5;
+    animation-name: trayectoria;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+}
+
+#huracan {
+    width: 100%;
+    animation-name: huracan;
+    animation-duration: .17s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes huracan {
+    from { transform: rotate(360deg); }    
+}
+
+@keyframes trayectoria {
+    0% {left: 60%; top: 60%;}
+    10% {left: 62%; top: 55%;}
+    20% {left: 58%; top: 50%;}
+    30% {left: 55%; top: 45%;}
+    40% {left: 51%; top: 40%;}
+    50% {left: 47%; top: 35%;}
+    60% {left: 45%; top: 30%;}
+    70% {left: 44%; top: 30%;}
+    80% {left: 43%; top: 29%;}
+    90% {left: 42%; top: 28%;}
+    100% {left: 42%; top: 27%; display: none;}
+}
